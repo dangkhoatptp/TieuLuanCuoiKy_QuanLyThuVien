@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main_TrangChu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Trang chủ</title>
+</head>
+<body>
+    <div class="narbar-area">
+        <div class="narbar-area__avatar">
+            <div class="avatar__logo"></div>
+            Admin
+        </div>
+        <div class="narbar-area__narbar">
+            <ul class="narbar__list">
+                <li onclick="clickNarbarItem(0)" class="narbar__item item-select">Quản lý sách</li>
+                <li onclick="clickNarbarItem(1)" class="narbar__item">Quản lý độc giả</li>
+                <li onclick="clickNarbarItem(2)" class="narbar__item">Quản lý PMS</li>
+                <li onclick="clickNarbarItem(3)" class="narbar__item">Thống kê</li>
+            </ul>
+            <div class="narbar__line-select-item"></div>
+        </div>
+        <div class="narbar-area__log-out"><i class="fa-solid fa-arrow-right-from-bracket icon"></i>Đăng xuất</div>
+    </div>
+    <div class="container">
+        <div class="container__header">
+            Quản lý sách
+        </div>
+        <div class="container__content">
+            <!-- Quản lý sách -->
+            <div class="slides__item">
+                <div class="search">
+                    <select onchange="selectTypeOfSearch()" name="" id="search__type-of-search-book">
+                        <option value="1">Tên sách</option>
+                        <option value="2">Tên tác giả</option>
+                    </select>
+                    <input type="text" id="search__input-search-book" placeholder="Nhập tên sách cần tìm...">
+                    <div class="search__button-search">Tìm</div>
+                </div>
+                <div class="list">
+                    <div class="list__table-header">
+                        <div class="table-header__id-book">Mã sách</div>
+                        <div class="table-header__name-book">Tên sách</div>
+                        <div class="table-header__author-book">Tác giả</div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-book">1</div>
+                        <div class="table-row__name-book">Những năm tháng yêu lầm P1</div>
+                        <div class="table-row__author-book">PLOY Trần Lê Ngọc Bích</div>
+                        <div class="table-row__tool">
+                            <div class="tool__info-book">Thông tin sách</div>
+                            <div class="tool__edit-book">Chỉnh sửa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-book">2</div>
+                        <div class="table-row__name-book">Đi Dọc Hà Nội - P1</div>
+                        <div class="table-row__author-book">Nguyễn Ngọc Tiến</div>
+                        <div class="table-row__tool">
+                            <div class="tool__info-book">Thông tin sách</div>
+                            <div class="tool__edit-book">Chỉnh sửa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-book">3</div>
+                        <div class="table-row__name-book">Đi Dọc Hà Nội - P2</div>
+                        <div class="table-row__author-book">Nguyễn Ngọc Tiến</div>
+                        <div class="table-row__tool">
+                            <div class="tool__info-book">Thông tin sách</div>
+                            <div class="tool__edit-book">Chỉnh sửa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-book">4</div>
+                        <div class="table-row__name-book">Đi Ngang Hà Nội - P1</div>
+                        <div class="table-row__author-book">Nguyễn Ngọc Tiến</div>
+                        <div class="table-row__tool">
+                            <div class="tool__info-book">Thông tin sách</div>
+                            <div class="tool__edit-book">Chỉnh sửa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-book">5</div>
+                        <div class="table-row__name-book">Đi Ngang Hà Nội - P2</div>
+                        <div class="table-row__author-book">Nguyễn Ngọc Tiến</div>
+                        <div class="table-row__tool">
+                            <div class="tool__info-book">Thông tin sách</div>
+                            <div class="tool__edit-book">Chỉnh sửa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-book">6</div>
+                        <div class="table-row__name-book">Nhặt Dũng Cảm Lên Ta Làm Lại</div>
+                        <div class="table-row__author-book">Dung Keil</div>
+                        <div class="table-row__tool">
+                            <div class="tool__info-book">Thông tin sách</div>
+                            <div class="tool__edit-book">Chỉnh sửa</div>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="functionAddBook()" class="button-add-book"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <!-- Quản lý độc giả -->
+            <div class="slides__item display-none">
+                <div class="search">
+                    <input type="text" id="search__input-search-user" placeholder="Nhập tên độc giả cần tìm...">
+                    <div class="search__button-search">Tìm</div>
+                </div>
+                <div class="list">
+                    <div class="list__table-header">
+                        <div class="table-header__id-user">Mã độc giả</div>
+                        <div class="table-header__name-user">Họ tên</div>
+                        <div class="table-header__date">Ngày sinh</div>
+                        <div class="table-header__register">Ngày tham gia</div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-user">1</div>
+                        <div class="table-row__name-user">Nguyễn Văn A</div>
+                        <div class="table-row__date">10-10-2002</div>
+                        <div class="table-row__register">10-06-2021</div>
+                        <div class="table-row__tool">
+                            <div class="tool__edit-user">Chỉnh sửa</div>
+                            <div class="tool__delete-user">Xóa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-user">2</div>
+                        <div class="table-row__name-user">Nguyễn Văn B</div>
+                        <div class="table-row__date">12-03-1998</div>
+                        <div class="table-row__register">10-06-2021</div>
+                        <div class="table-row__tool">
+                            <div class="tool__edit-user">Chỉnh sửa</div>
+                            <div class="tool__delete-user">Xóa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-user">3</div>
+                        <div class="table-row__name-user">Nguyễn Văn C</div>
+                        <div class="table-row__date">04-10-2001</div>
+                        <div class="table-row__register">10-06-2021</div>
+                        <div class="table-row__tool">
+                            <div class="tool__edit-user">Chỉnh sửa</div>
+                            <div class="tool__delete-user">Xóa</div>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="functionAddUser()" class="button-add-user"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <!-- Quản lý phiếu mượn sách -->
+            <div class="slides__item display-none">
+                <div class="search">
+                    <input type="text" id="search__input-search" placeholder="Nhập tên người mượn cần tìm...">
+                    <div class="search__button-search">Tìm</div>
+                </div>
+                <div class="list">
+                    <div class="list__table-header">
+                        <div class="table-header__id-borrower">Mã PMS</div>
+                        <div class="table-header__date-create-borrower">Ngày tạo PMS</div>
+                        <div class="table-header__name-borrower">Người mượn</div>
+                        <div class="table-header__date-deadline-borrower">Ngày phải trả</div>
+                        <div class="table-header__return-date-borrower">Ngày đem trả</div>
+                        <div class="table-header__status-borrower">Tình trạng</div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-borrower">1</div>
+                        <div class="table-row__date-create-borrower">11-06-2021</div>
+                        <div class="table-row__name-borrower">Nguyễn Văn A</div>
+                        <div class="table-row__date-deadline-borrower">18-06-2021</div>
+                        <div class="table-row__return-date-borrower"></div>
+                        <div class="table-row__status-borrower">Đang mượn sách</div>
+                        <div class="table-row__tool">
+                            <div class="tool__edit-borrower">Chỉnh sửa</div>
+                            <div class="tool__delete-borrower">Xóa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-borrower">2</div>
+                        <div class="table-row__date-create-borrower">11-06-2021</div>
+                        <div class="table-row__name-borrower">Nguyễn Văn B</div>
+                        <div class="table-row__date-deadline-borrower">18-06-2021</div>
+                        <div class="table-row__return-date-borrower">17-06-2021</div>
+                        <div class="table-row__status-borrower">Đã trả sách</div>
+                        <div class="table-row__tool">
+                            <div class="tool__edit-borrower">Chỉnh sửa</div>
+                            <div class="tool__delete-borrower">Xóa</div>
+                        </div>
+                    </div>
+                    <div class="list__table-row">
+                        <div class="table-row__id-borrower">3</div>
+                        <div class="table-row__date-create-borrower">11-06-2021</div>
+                        <div class="table-row__name-borrower">Nguyễn Văn C</div>
+                        <div class="table-row__date-deadline-borrower">18-06-2021</div>
+                        <div class="table-row__return-date-borrower">12-06-2021</div>
+                        <div class="table-row__status-borrower">Đã trả sách</div>
+                        <div class="table-row__tool">
+                            <div class="tool__edit-borrower">Chỉnh sửa</div>
+                            <div class="tool__delete-borrower">Xóa</div>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="functionAddPMS()" class="button-add-borrower"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <!-- Thống kê -->
+            <div class="slides__item display-none">
+                
+            </div>
+
+            <!-- Thêm sách -->
+            <div class="slides__add-book display-none">
+
+            </div>
+
+            <!-- Thêm thành viên -->
+            <div class="slides__add-user display-none">
+
+            </div>
+
+            <!-- Thêm phiếu mượn sách -->
+            <div class="slides__add-pms display-none">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main_TrangChu.js"></script>
+</body>
+</html>

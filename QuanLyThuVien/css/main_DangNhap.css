@@ -1,0 +1,87 @@
+:root {
+    --mau-trang: white;
+    --mau-nut-dang-nhap: #2c3e50;
+    --mau-nut-dang-nhap-hover: #34495e;
+    --mau-vien-input: #bdc3c7;
+    --mau-chu-dang-nhap: #f39c12;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url(/images/HinhNenDangNhap.jpg);
+    background-size: contain;
+    display: flex;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-dang-nhap {
+    background-color: var(--mau-trang);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.form-dang-nhap__logo {
+    height: 70px;
+    width: 250px;
+    background-image: url(/images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 20px 0 20px 0;
+}
+
+.form-dang-nhap__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__ten-dang-nhap {
+
+}
+
+.form__mat-khau {
+
+}
+
+.form-dang-nhap input {
+    width: 400px;
+    height: 35px;
+    font-size: 20px;
+    padding: 4px;
+    margin: 10px 35px;
+    border: 1px solid var(--mau-vien-input);
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+}
+
+.form-dang-nhap input::placeholder {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.form__btn-dang-nhap {
+    width: 400px;
+    font-size: 22px;
+    color: var(--mau-chu-dang-nhap);
+    background-color: var(--mau-nut-dang-nhap);
+    padding: 10px 0;
+    border: 1px solid var(--mau-nut-dang-nhap);
+    border-radius: 10px;
+    margin: 20px 0 30px 0;
+    align-self: center;
+    text-align: center;
+    user-select: none;
+    font-weight: 500;
+    transition: background-color 0.1s ease-in;
+}
+
+.form__btn-dang-nhap:hover {
+    background-color: var(--mau-nut-dang-nhap-hover);
+    cursor: pointer;
+}

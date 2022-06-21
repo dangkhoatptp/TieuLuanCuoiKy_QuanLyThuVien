@@ -1,0 +1,498 @@
+:root {
+    --mau-nen-narbar: #2c3e50;
+    --mau-nen-narbar-hover: #34495e;
+    --mau-trang: white;
+    --mau-xam: #7f8c8d;
+    --mau-trang-nga: #bdc3c7;
+    --mau-chon-narbar-item: #2980b9;
+    --mau-vang: #f39c12;
+    --mau-vien-input: #bdc3c7;
+    --mau-xanh-duong: #2980b9;
+    --mau-xanh-duong-nhat: #3498db;
+    --mau-xanh-la: #27ae60;
+    --mau-xanh-la-nhat: #2ecc71;
+    --mau-do: #c0392b;
+    --mau-do-nhat: #e74c3c;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Narbar */
+.narbar-area {
+    width: 200px;
+    background-color: var(--mau-nen-narbar);
+    display: flex;
+    flex-direction: column;
+}
+.narbar-area__avatar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: var(--mau-trang);
+    border-bottom: 1px solid var(--mau-xam);
+    user-select: none;
+    pointer-events: none;
+}
+.avatar__logo {
+    width: 30px;
+    height: 30px;
+    background-color: var(--mau-trang);
+    border-radius: 15px;
+    margin: 15px 10px 15px 15px;
+}
+.narbar-area__narbar {
+    flex: 1;
+    position: relative;
+}
+.narbar__list {
+    list-style: none;
+    padding: 0;
+}
+.narbar__line-select-item {
+    width: 3px;
+    height: 40px;
+    background-color: var(--mau-chon-narbar-item);
+    position: absolute;
+    top: 16px;
+    transition: top 0.15s ease-in;
+}
+.item-1 {
+    top: 56px;
+}
+.item-2 {
+    top: 96px;
+}
+.item-3 {
+    top: 136px;
+}
+.narbar__item {
+    color: var(--mau-trang-nga);
+    padding: 10px 0 10px 20px;
+    font-weight: 600;
+    user-select: none;
+    background-color: none;
+    transition: background-color 0.1s linear;
+}
+.item-select {
+    background-color: var(--mau-nen-narbar-hover);
+}
+.narbar__item:hover {
+    cursor: pointer;
+    background-color: var(--mau-nen-narbar-hover);
+}
+.narbar-area__log-out {
+    height: 50px;
+    color: var(--mau-trang-nga);
+    background-color: none;
+    transition: background-color 0.15s ease-in;
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    user-select: none;
+    border-top: 1px solid var(--mau-trang-nga);
+}
+.narbar-area__log-out:hover {
+    cursor: pointer;
+    background-color: var(--mau-nen-narbar-hover);
+}
+.icon {
+    font-size: 22px;
+    margin: 0 10px 0 30px;
+}
+
+/* Container */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.container__header {
+    height: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--mau-nen-narbar);
+    padding-left: 20px;
+    border-bottom: 1px solid var(--mau-nen-narbar);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.container__content {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.display-none {
+    display: none !important;
+}
+.slides__item,
+.slides__add-book,
+.slides__add-user,
+.slides__add-pms {
+    width: 100%;
+    height: 100%;
+}
+
+/* Slide 1: Quản lý sách */
+.slides__item:nth-child(1),
+.slides__item:nth-child(2),
+.slides__item:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search {
+    display: flex;
+    margin: 10px 0;
+}
+#search__type-of-search-book {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-color: var(--mau-vien-input);
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 550;
+}
+#search__input-search-book,
+#search__input-search-user,
+#search__input-search {
+    width: 600px;
+    font-size: 20px;
+    padding: 0 4px;
+    border: 1px solid var(--mau-vien-input);
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.search__button-search {
+    color: var(--mau-vang);
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--mau-nen-narbar);
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.1s ease-in;
+    user-select: none;
+}
+.search__button-search:hover {
+    cursor: pointer;
+    background-color: var(--mau-nen-narbar-hover);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    position: relative;
+}
+.list__table-header {
+    display: flex;
+    margin-bottom: 10px;
+}
+.table-header__id-book,
+.table-header__name-book,
+.table-header__author-book,
+.table-header__id-user,
+.table-header__name-user,
+.table-header__date,
+.table-header__register,
+.table-header__status,
+.table-header__id-borrower,
+.table-header__date-create-borrower,
+.table-header__name-borrower,
+.table-header__date-deadline-borrower,
+.table-header__return-date-borrower,
+.table-header__status-borrower {
+    font-size: 18px;
+    user-select: none;
+}
+.table-header__name-book {
+    margin-left: 17px;
+}
+.table-header__author-book {
+    margin-left: 374px;
+}
+.list__table-row {
+    display: flex;
+}
+.table-row__id-book {
+    width: 80px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__name-book {
+    min-width: 400px;
+    font-size: 18px;
+    padding: 4px 20px;
+    border: 1px solid var(--mau-trang-nga);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    user-select: none;
+}
+.table-row__author-book {
+    width: 220px;
+    font-size: 18px;
+    padding: 4px 20px;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+.table-row__tool {
+    display: flex;
+}
+.tool__info-book {
+    color: var(--mau-trang);
+    font-size: 18px;
+    background-color: var(--mau-xanh-duong);
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.1s ease-in;
+    user-select: none;
+}
+.tool__info-book:hover {
+    cursor: pointer;
+    background-color: var(--mau-xanh-duong-nhat);
+}
+.tool__edit-book {
+    color: var(--mau-trang);
+    font-size: 18px;
+    background-color: var(--mau-xanh-la);
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.1s ease-in;
+    user-select: none;
+}
+.tool__edit-book:hover {
+    cursor: pointer;
+    background-color: var(--mau-xanh-la-nhat);
+}
+.button-add-book,
+.button-add-user,
+.button-add-borrower {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    color: var(--mau-trang-nga);
+    background-color: var(--mau-xam);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.button-add-book:hover,
+.button-add-user:hover,
+.button-add-borrower:hover {
+    cursor: pointer;
+}
+
+/* Quản lý thành viên */
+.table-header__name-user {
+    margin-left: 10px;
+}
+.table-header__date {
+    margin-left: 260px;
+}
+.table-header__register {
+    margin-left: 43px;
+}
+.list__table-row {
+
+}
+.table-row__id-user {
+    width: 95px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__name-user {
+    width: 300px;
+    font-size: 18px;
+    padding: 4px 4px;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+.table-row__date {
+    width: 120px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__register {
+    width: 130px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__tool {
+
+}
+.tool__edit-user,
+.tool__edit-borrower {
+    color: var(--mau-trang);
+    font-size: 18px;
+    background-color: var(--mau-xanh-la);
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.1s ease-in;
+    user-select: none;
+}
+.tool__edit-user:hover,
+.tool__edit-borrower:hover {
+    cursor: pointer;
+    background-color: var(--mau-xanh-la-nhat);
+}
+.tool__delete-user,
+.tool__delete-borrower {
+    color: var(--mau-trang);
+    font-size: 18px;
+    background-color: var(--mau-do);
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.1s ease-in;
+    user-select: none;
+}
+.tool__delete-user:hover,
+.tool__delete-borrower:hover {
+    cursor: pointer;
+    background-color: var(--mau-do-nhat);
+}
+
+/* Quản lý PMS */
+.table-header__date-create-borrower {
+    margin-left: 12px;
+}
+.table-header__name-borrower {
+    margin-left: 8px;
+}
+.table-header__date-deadline-borrower {
+    margin-left: 142px;
+}
+.table-header__return-date-borrower {
+    margin-left: 22px;
+}
+.table-header__status-borrower {
+    margin-left: 20px;
+}
+.table-row__id-borrower {
+    width: 70px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__date-create-borrower {
+    width: 120px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__name-borrower {
+    width: 230px;
+    font-size: 18px;
+    padding: 4px 4px;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+.table-row__date-deadline-borrower {
+    width: 130px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__return-date-borrower {
+    width: 130px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+.table-row__status-borrower {
+    width: 160px;
+    font-size: 18px;
+    padding: 4px 0;
+    border: 1px solid var(--mau-trang-nga);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    user-select: none;
+}
+
